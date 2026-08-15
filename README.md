@@ -26,6 +26,68 @@ Both themes retain the structured, full-featured layout and symbol mapping of th
 
 ## 📦 Prerequisites
 
-1. **Starship Prompt** installed[cite: 1]:
+1. **Starship Prompt** installed [cite: 1]:
    ```sh
-   curl -sS [https://starship.rs/install.sh](https://starship.rs/install.sh) | sh
+   curl -sS https://starship.rs/install.sh | sh
+   ```
+2. A **Nerd Font** installed and enabled in your terminal (e.g., *JetBrainsMono Nerd Font*, *FiraCode Nerd Font*, or *MesloLGS NF*) for OS glyphs and powerline separators (``, ``, ``) [cite: 1].
+
+---
+
+## 🚀 Installation & Switching Themes
+
+### Clone the Repository
+```sh
+git clone https://github.com/itsmedeimo/Starship.git ~/starship-presets
+cd ~/starship-presets
+```
+
+### Apply a Theme
+
+#### Option A: Apply WhiteSur Dark
+```sh
+cp configs/bigsur-dark/starship.toml ~/.config/starship.toml
+source ~/.bashrc   # Or ~/.zshrc / source ~/.config/fish/config.fish
+```
+
+#### Option B: Apply ThinkPad Edition
+```sh
+cp configs/thinkpad/starship.toml ~/.config/starship.toml
+source ~/.bashrc   # Or ~/.zshrc / source ~/.config/fish/config.fish
+```
+
+---
+
+## ⚙️ Quick Shell Setup
+
+Make sure Starship is initialized in your shell config [cite: 1]:
+
+- **Bash (`~/.bashrc`):**
+  ```sh
+  eval "$(starship init bash)"
+  ```
+- **Zsh (`~/.zshrc`):**
+  ```sh
+  eval "$(starship init zsh)"
+  ```
+- **Fish (`~/.config/fish/config.fish`):**
+  ```fish
+  starship init fish | source
+  ```
+
+---
+
+## 📂 Repository Structure
+
+```text
+.
+├── README.md
+├── configs/bigsur-dark/starship.toml   # WhiteSur Dark config
+└── configs/thinkpad/starship.toml        # ThinkPad config
+```
+
+---
+
+## 📜 License
+
+MIT © itsmedeimo
